@@ -60,6 +60,49 @@ DEALINGS IN THE SOFTWARE.
 *.war
 *.ear
 
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.nikai.crickettv"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.13'
+}
+
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nikai.crickettv">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:hardwareAccelerated="true"
+        android:label="CricTV Live"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+       
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".PlayerActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="landscape" />
+    </application>
+</manifest>
 # Gradle files
 .gradle/
 build/
