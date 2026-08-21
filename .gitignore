@@ -1,0 +1,25 @@
+Code Snippet
+# Built application files
+*.apk
+*.aar
+*.war
+*.ear
+
+# Gradle files
+.gradle/
+build/
+*/build/
+
+# IDE specific files
+.idea/
+.navigation/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Log files
+*.log
